@@ -1,0 +1,93 @@
+<div class="c1"><div class = "class1">
+	<mat-card>
+	<form [formGroup]="registrationForm" (ngSubmit)="callingFunction()">
+	
+	<div class ="form-group">
+	<mat-form-field appearance ="fill">
+		<mat-label>Donor Name</mat-label>
+		<input matInput class="form-control" formControlName="donorName">
+	</mat-form-field>
+	</div>
+	<br>
+
+	<div class ="form-group">
+	<mat-form-field appearance ="fill">
+		<mat-label>Gender</mat-label>
+		<mat-select formControlName="g">
+			<mat-option *ngFor="let g of gender" [value]="g.viewValue" >
+			{{g.viewValue}}
+			</mat-option>
+		</mat-select>
+	</mat-form-field>
+	</div>
+	<br>
+ 
+	<div class ="form-group">
+	<mat-form-field appearance ="fill">
+		<mat-label>Age</mat-label>
+		<input matInput class ="form-control" formControlName="age"/>
+	</mat-form-field>
+	</div>
+	<br>
+
+	<div class ="form-group">
+	<mat-form-field appearance ="fill">
+		<mat-label>Mobile No</mat-label>
+		<input matInput class ="form-control" formControlName="mobileNo"/>
+	</mat-form-field>
+	</div>
+	<br>
+	
+	<div class ="form-group">
+	<mat-form-field appearance ="fill">
+		<mat-label>Address</mat-label>
+		<input matInput class ="form-control" formControlName="address"/>
+	</mat-form-field>
+	</div>
+	<br>
+
+	<div class ="form-group">
+	<mat-form-field appearance ="fill">
+		<mat-label>Blood Group</mat-label>
+		<mat-select formControlName="grp">
+			<mat-option	*ngFor =" let grp of bloodGrp" [value] = "grp.viewValue"> 
+				{{grp.viewValue}}
+			</mat-option>
+		</mat-select>
+	</mat-form-field>
+	</div>
+	<br>
+
+	<div class ="form-group">
+	<mat-form-field appearance ="fill">
+		<mat-label>Email Id</mat-label>
+		<input matInput class ="form-control" formControlName="email"/>
+	</mat-form-field>
+	</div>
+	<br>
+	
+	<div class ="form-group">
+	<mat-form-field appearance ="fill">
+		<mat-label>Password</mat-label>
+		<input matInput type ="password" class ="form-control" formControlName="password"/>
+	</mat-form-field>
+	</div>
+
+
+	<div class="form-group">
+	<mat-form-field appearance="fill">
+		<mat-label>Select Blood Bank</mat-label>
+		<mat-select formControlName="b">
+			<mat-option *ngFor  ="let b of bloodBank" [value]="b.viewValue">
+				{{b.viewValue}}
+			</mat-option>
+		</mat-select>
+	</mat-form-field>
+	</div>
+
+	<button mat-raised-button color="accent" type= "submit">Submit</button>
+</form>
+</mat-card>
+
+</div>
+</div>
